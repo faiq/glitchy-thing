@@ -1,0 +1,18 @@
+{
+  "name": "glitchy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "glitcher": "^1.10.0",
+    "readimage": "^1.1.1",
+    "writepng": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
