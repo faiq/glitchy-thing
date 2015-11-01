@@ -10,7 +10,7 @@ readFile(process.argv[2]).then(function (contents) {
   })
   .then(function (image) {
     image.frames.forEach(function (frame) {
-    glitcher.glitchClamp(glitcher.redBlueOverlay(glitcher.rowslice(glitcher.pixelshift(glitcher.smear(frame.data, 66.6), 666), 666*666)))
+      glitcher.glitchClamp(glitcher.redBlueOverlay(glitcher.rowslice(glitcher.pixelshift(glitcher.smear(frame.data, 66.6), 666), 666*666)))
     })
     return writepng(image)
   })
