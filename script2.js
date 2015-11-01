@@ -12,9 +12,9 @@ function readOtherFile (image) {
 }
 
 function glitchify(image, secondImage) {
-  var buf1 = image.frames[0].data
-  glitcher.glitchClamp(glitcher.redBlueOverlay(glitcher.smear(secondImage.frames[0].data, 66)), 666)
-  glitcher.cloneChannel(glitcher.rowslice(buf1, 6666*666), secondImage.frames[0].data, 2)
+  glitcher.glitchClamp(glitcher.redBlueOverlay(glitcher.smear(secondImage.frames[0].data, 66)))
+  glitcher.ghostColors(glitcher.rowslice(image.frames[0].data, 66*666))
+  glitcher.cloneChannel(image.frames[0].data, secondImage.frames[0].data, Math.random() * 3 | 0)
   return writepng(secondImage)
 }
 

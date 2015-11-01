@@ -15,7 +15,7 @@ readFile(process.argv[2]).then(function (contents) {
     return writepng(image)
   })
   .then(function (glitchedgif) {
-    return writeFile('output.png', glitchedgif)
+    return writeFile(process.argv[3], glitchedgif)
   })
   .catch(function (err) {
     console.log(err) 
